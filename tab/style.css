@@ -1,0 +1,24 @@
+.tab {
+  border: 1px solid #ccc;
+}
+
+.content {
+  border: 1px solid #ccc;
+  width: 200px;
+  height: 200px;
+  display: none;
+}
+
+.content:target {
+  display: block;
+}
+
+#tab0 {
+  display: block;
+  /* tab0 默认展示 */
+}
+
+.content:target~#tab0 {
+  display: none;
+  /* 当 .content 并处于 target 状态时，tab0 隐藏 */
+}
