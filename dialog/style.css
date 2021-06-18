@@ -1,0 +1,57 @@
+.lightbox {
+  display: none;
+}
+
+.lightbox:target {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-box {
+  margin: 50px;
+}
+
+.content-box .content {
+  background-color: lightpink;
+  padding: 50px;
+}
+
+.content-box .close {
+  position: relative;
+  display: block;
+}
+
+.content-box .close::after {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+  content: "×";
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-box .close::before {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  content: "";
+  cursor: default;
+  z-index: -1;
+}
+
